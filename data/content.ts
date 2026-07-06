@@ -5,7 +5,7 @@ export const siteConfig = {
   domain: 'andrewcastor.dev',
   email: 'JohnAndrewCastor@gmail.com',
   location: 'Orlando, FL',
-  availability: 'Available for co-op, internships & infrastructure roles',
+  availability: 'Targeting cybersecurity, cloud, and information security analyst roles',
   resumeFilename: 'Andrew_Castor_Resume.pdf',
   links: {
     github: 'https://github.com/osakhra',
@@ -30,57 +30,57 @@ export const siteConfig = {
 };
 
 export const summary = `Cybersecurity student heading into UCF's NSA-designated cybersecurity program with 2 years of hands-on infrastructure and healthcare IT work experience. Having built hardened Linux deployments, multi-site networks, and offline-first clinical systems for volunteer medical missions; the kind of constrained, high-stakes environments that translate directly to cloud security and cleared work opportunities.`;
-export const resumeSummary = `Infrastructure and security engineer with 2 years of hands-on production work across healthcare IT, austere field deployments, and high-pressure event operations. CompTIA Security+ and Network+ certified, with active AZ-500 study underway. Currently leading offline-first EMR and network infrastructure for a Houston-based volunteer medical mission, with successful field deployment in Costa Rica (April 2026). Background includes founding a competitive esports organization with international developer partnerships, and 2 years in client-facing event operations. Heading into UCF's NSA-designated cybersecurity program (Fall 2026) on an accelerated B.S. to M.S. track. Targeting cloud security, infrastructure, and cleared defense roles.`;
+export const resumeSummary = `Infrastructure and security engineer with 2+ years deploying healthcare IT and secure networks in production and austere field environments. Built end-to-end offline-capable EMR systems, hardened access controls, and trained 50+ users. CompTIA Security+ and Network+ certified. Pursuing B.S. Information Technology at UCF (NSA CAE-CD) with accelerated M.S. Cyber Security & Privacy track. Targeting cybersecurity, cloud, and information security analyst roles.`;
 
 export const capabilities = [
   {
-    category: 'Infrastructure & Linux',
-    icon: 'server',
-    items: [
-      'Ubuntu Server',
-      'Apache · Nginx',
-      'MariaDB · MySQL',
-      'VirtualBox',
-      'Wi-Fi 6 Mesh',
-      'LAN/WAN',
-      'Netplan · DHCP/DNS',
-    ],
-  },
-  {
-    category: 'Security',
-    icon: 'shield',
-    items: [
-      'Private CA · OpenSSL',
-      'TLS · HTTPS hardening',
-      'UFW · iptables',
-      'RBAC · ACLs',
-      'Entra ID',
-      'Least Privilege',
-      'HIPAA-aligned posture',
-    ],
-  },
-  {
-    category: 'Cloud & DevOps',
+    category: 'Cloud & Security',
     icon: 'cloud',
     items: [
-      'Azure · Entra ID',
-      'SharePoint sync',
-      'AWS (learning)',
-      'Bash · Cron',
-      'PowerShell',
-      'Git · GitHub',
+      'Microsoft Azure',
+      'Entra ID',
+      'Microsoft 365',
+      'SharePoint',
+      'IAM/RBAC',
+      'ACLs',
+      'TLS/HTTPS',
+      'least-privilege design',
+      'vulnerability management',
     ],
   },
   {
-    category: 'Application & Data',
+    category: 'Infrastructure',
+    icon: 'server',
+    items: [
+      'LAN/WAN',
+      'Wi-Fi 6 mesh',
+      'DHCP/DNS',
+      'Active Directory',
+      'Linux server administration',
+    ],
+  },
+  {
+    category: 'Healthcare IT',
+    icon: 'shield',
+    items: [
+      'OpenEMR',
+      'OpenMRS',
+      'XAMPP',
+      'offline-first clinical systems',
+    ],
+  },
+  {
+    category: 'Programming & Tools',
     icon: 'code',
     items: [
-      'Node.js · React',
-      'PHP 8.1',
       'Python',
-      'SQL · SQLite/MariaDB',
-      'HL7 (planned)',
-      'TensorFlow Lite',
+      'C#',
+      'PowerShell',
+      'SQL',
+      'Git/GitHub',
+      'AWS (learning)',
+      'Splunk SIEM (home lab)',
+      'TryHackMe SOC L1',
     ],
   },
 ];
@@ -88,7 +88,7 @@ export const capabilities = [
 export const certifications = [
   { name: 'CompTIA Security+', status: 'earned' as const,   url: 'https://placeholder.example.com/comptia-security-plus' },
   { name: 'CompTIA Network+', status: 'earned' as const,    url: 'https://placeholder.example.com/comptia-network-plus' },
-  { name: 'Google IT Support', status: 'earned' as const,   url: 'https://www.credly.com/badges/835f3b5d-8240-4fb8-a3c7-a4857ca1dded/public_url' },
+  { name: 'Google IT Support Professional', status: 'earned' as const, url: 'https://www.credly.com/badges/835f3b5d-8240-4fb8-a3c7-a4857ca1dded/public_url' },
   { name: 'Azure AZ-500',      status: 'progress' as const, url: 'https://placeholder.example.com/azure-az-500' },
 ];
 
@@ -121,13 +121,14 @@ type ExperienceEntry = {
 
 export const experience: ExperienceEntry[] = [
   {
-    role: 'Tech Operations Lead',
+    role: 'Lead Systems Engineer / Implementation Lead',
     company: 'Medical Missionaries of Divine Mercy',
     location: 'Houston, TX',
     dates: '2023 – Present',
     links: [
       { url: 'https://mmdm.org', label: 'MMDM.org' },
       { url: 'https://mmdm.andrewcastor.dev', label: 'Field Journal' },
+      { url: '/projects/mmdm-clinical-platform', label: 'Case Study' },
     ],
 
     metrics: [
@@ -193,20 +194,20 @@ export const education = [
     institution: 'University of Central Florida',
     degree: 'B.S. Information Technology (CECS) · Accelerated M.S. Cyber Security & Privacy Track',
     location: 'Orlando, FL',
-    dates: 'Fall 2026',
+    dates: 'Expected Fall 2028',
   },
   {
-    institution: 'Houston City College',
+    institution: 'Houston Community College',
     degree: 'A.A.S. Artificial Intelligence · National Honor Society',
     location: 'Houston, TX',
     dates: 'Conferred 2025',
     gpa: '3.8',
   },
   {
-    institution: 'Houston City College',
+    institution: 'Houston Community College',
     degree: 'A.S. General Science',
     location: 'Houston, TX',
-    dates: 'Conferred 2026',
+    dates: 'Expected Aug 9, 2026',
   },
 ];
 
