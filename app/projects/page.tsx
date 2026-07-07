@@ -77,8 +77,9 @@ export default function ProjectsPage() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {others.map((p, i) => {
             const cardHref =
-              p.slug === 'air-grid' ? 'https://air.andrewcastor.dev' :
-              p.slug === 'eegd'     ? '/EEGD_Final_Report.pdf'        :
+              p.slug === 'air-grid' ? 'https://air.andrewcastor.dev'   :
+              p.slug === 'atlas'    ? 'https://atlas.andrewcastor.dev' :
+              p.slug === 'eegd'     ? '/EEGD_Final_Report.pdf'         :
               undefined;
             return (
               <FadeUp key={p.slug} delay={i * 60}>
@@ -86,10 +87,12 @@ export default function ProjectsPage() {
               </FadeUp>
             );
           })}
-          <FadeUp delay={others.length * 60}>
-            <GithubTile />
-          </FadeUp>
         </div>
+        <FadeUp delay={others.length * 60}>
+          <div className="mt-4">
+            <GithubTile />
+          </div>
+        </FadeUp>
       </div>
     </section>
   );

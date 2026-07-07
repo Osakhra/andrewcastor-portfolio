@@ -257,9 +257,12 @@ export const projects: Project[] = [
     status: 'shipped',
     statusLabel: 'Live 2026',
     description:
-      'Live U.S. air quality and industrial emissions atlas built in one day using Claude Code\'s multi-agent system. Parallel ingestion agents pulled from 6 federal data sources; a geo-matcher joined 108,336 schools to their nearest emitters using scipy cKDTree; a QA agent validated before deploy. Stack: Next.js, MapLibre, deck.gl, Python. 268,980 facilities, 15,897 live sensors, real proximity joins, no mock data.',
+      'Live atlas of what\'s in the air across the U.S.: industrial emitters sized by emissions, real-time air quality sensors, and the schools and neighborhoods next to them, together on one interactive map. 268,980 facilities, 15,897 live sensors, real proximity joins, no mock data.',
     bullets: [
-      'One-day build challenge (Handshake AI Projects) · June 1, 2026 · air.andrewcastor.dev',
+      'Built and deployed in one day (Handshake AI Projects challenge, June 1, 2026) using Claude Code\'s multi-agent system: parallel ingestion subagents coordinated through a frozen data contract, with sequential gates for schema, joins, and QA.',
+      'Pulls from 6 federal sources (EPA ECHO, FRS, TRI, GHGRP, NCES, Census ACS) plus AirNow, PurpleAir, and OpenAQ sensor networks; a geo-matcher joins 108,336 schools to their nearest emitters with scipy cKDTree.',
+      'deck.gl over MapLibre renders 10k+ points at 60fps, with independent toggle layers for facilities, air quality, schools, demographics, and NWS wind drift.',
+      'Hourly scheduled job keeps sensor readings live; every figure shows its timestamp and source, and an Analysis view ranks regions and surfaces the most-exposed campuses.',
     ],
     technologies: [
       'Next.js 14',
@@ -274,12 +277,37 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: 'atlas',
+    title: 'Atlas · Cinematic 3D Travel Globe',
+    category: '3D / Geospatial',
+    status: 'shipped',
+    statusLabel: 'Live 2026',
+    description:
+      'Interactive 3D globe pinning everywhere I\'ve lived, vacationed, and done mission work, plus everywhere I plan to go. Styled after the Apple lock-screen Earth: deep space, city lights, atmospheric scattering, soft bloom. Custom-built with three.js and globe.gl plus hand-written GLSL; no UI kits, no state libraries.',
+    bullets: [
+      'Custom day/night shader pipeline: normal-mapped terrain, soft terminator blend, isolated and boosted city lights, Blinn-Phong ocean glint, and rotating cloud shadows cast onto the surface.',
+      'Camera-relative sun direction recomputed every frame so the lighting reads cinematic from any angle; the day/night toggle sweeps the terminator across the globe in about a second.',
+      'Procedural starfield of 4,500 stars from a seeded PRNG, identical on every load, with per-star size and color tiers for a realistic luminosity distribution.',
+      'Automatic performance mode detects software rendering and low-RAM devices before any WebGL allocation, then falls back to lite shaders, no MSAA, and halved geometry for roughly 50x less fill work.',
+      '107-node append-only place tree validated at build time; URL-hash deep links fly the camera straight to any pin.',
+    ],
+    technologies: [
+      'Next.js 14',
+      'TypeScript',
+      'three.js',
+      'globe.gl',
+      'Custom GLSL',
+      'Tailwind CSS',
+      'Static export',
+    ],
+  },
+  {
     slug: 'eegd',
     title: 'Emergency Evacuation Guidance Device',
     category: 'Embedded · IoT',
     status: 'shipped',
     statusLabel: 'Prototype',
-    context: 'ENGR 1201 · Houston City College · Spring 2026',
+    context: 'ENGR 1201 · Houston Community College · Spring 2026',
     description: 
       'Handheld emergency evacuation device that computes and displays real-time escape routes from live temperature sensor data. Routes rebuild automatically as heat develops; reroutes around blocked zones, escalating through warning states, and triggering Shelter-In-Place when all exits are blocked.',
     bullets: [

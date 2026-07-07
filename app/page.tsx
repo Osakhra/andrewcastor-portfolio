@@ -264,10 +264,12 @@ export default function HomePage() {
                 <ProjectCard {...project} />
               </FadeUp>
             ))}
-            <FadeUp delay={otherProjects.length * 60}>
-              <GithubTile />
-            </FadeUp>
           </div>
+          <FadeUp delay={otherProjects.length * 60}>
+            <div className="mt-4">
+              <GithubTile />
+            </div>
+          </FadeUp>
         </div>
       </section>
 
