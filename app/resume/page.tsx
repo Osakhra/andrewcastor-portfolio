@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import {
   siteConfig,
   resumeSummary,
@@ -17,6 +18,7 @@ import {
   LinkedinIcon,
   ShieldIcon,
   ExternalLinkIcon,
+  ArrowRightIcon,
 } from '@/components/Icons';
 import FadeUp from '@/components/FadeUp';
 import SectionHeader from '@/components/SectionHeader';
@@ -124,19 +126,30 @@ export default function ResumePage() {
                  <span>{job.company}</span>
                  <span className="text-text-tertiary">·</span>
                  <span className="text-text-tertiary">{job.location}</span>
-                 {job.links && job.links.map((link) => (
+                 {job.links && job.links.map((link) => {
+                   const isInternal = link.url.startsWith('/');
+                   const linkClass =
+                     'inline-flex items-center gap-1 rounded-md border border-border-subtle bg-bg-secondary/60 px-2 py-0.5 font-mono text-[11px] text-text-tertiary transition-colors hover:border-accent-teal/50 hover:text-accent-teal';
+                   return (
                      <span key={link.url} className="inline-flex items-center gap-1.5">
                      <span className="text-text-tertiary">·</span>
-                     <a
-                       href={link.url}
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       className="inline-flex items-center gap-1 rounded-md border border-border-subtle bg-bg-secondary/60 px-2 py-0.5 font-mono text-[11px] text-text-tertiary transition-colors hover:border-accent-teal/50 hover:text-accent-teal"
-                     >
-                      {link.label} <ExternalLinkIcon size={11} />
-                     </a>
+                     {isInternal ? (
+                       <Link href={link.url} className={linkClass}>
+                         {link.label} <ArrowRightIcon size={11} />
+                       </Link>
+                     ) : (
+                       <a
+                         href={link.url}
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className={linkClass}
+                       >
+                         {link.label} <ExternalLinkIcon size={11} />
+                       </a>
+                     )}
                </span>
-            ))}
+                   );
+                 })}
            </p>
 
                 {/* Optional metrics strip */}
@@ -252,7 +265,7 @@ export default function ResumePage() {
             </h2>
             <div className="space-y-3">
               {education.map((edu) => (
-                <div key={edu.institution} className="ac-card">
+                <div key={`${edu.institution}-${edu.degree}`} className="ac-card">
                   <div className="mb-0.5 flex flex-wrap items-baseline justify-between gap-2">
                     <h3 className="font-display text-base font-semibold text-text-primary">
                       {edu.institution}

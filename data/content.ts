@@ -126,9 +126,9 @@ export const experience: ExperienceEntry[] = [
     location: 'Houston, TX',
     dates: '2023 – Present',
     links: [
-      { url: 'https://mmdm.org', label: 'MMDM.org' },
-      { url: 'https://mmdm.andrewcastor.dev', label: 'Field Journal' },
       { url: '/projects/mmdm-clinical-platform', label: 'Case Study' },
+      { url: 'https://mmdm.andrewcastor.dev', label: 'Field Journal' },
+      { url: 'https://mmdm.org', label: 'MMDM.org' },
     ],
 
     metrics: [
@@ -207,7 +207,7 @@ export const education = [
     institution: 'Houston Community College',
     degree: 'A.S. General Science',
     location: 'Houston, TX',
-    dates: 'Expected Aug 9, 2026',
+    dates: 'Conferred 2026',
   },
 ];
 
