@@ -103,22 +103,21 @@ function EmrDiagram() {
 
 function WifiDiagram() {
   const buildings = [
-    { x: 20,  label: 'Bldg A' },
-    { x: 160, label: 'Bldg B' },
-    { x: 290, label: 'Bldg C' },
-    { x: 420, label: 'Bldg D' },
-    { x: 560, label: 'Bldg E' },
+    { x: 60,  label: 'Bldg 1', sub: 'Church · LAN core', subSize: 8 },
+    { x: 220, label: 'Bldg 2', sub: 'Reg · Triage · Dental · Rx', subSize: 8 },
+    { x: 380, label: 'Bldg 3', sub: 'Wi-Fi 6 AP', subSize: 9 },
+    { x: 540, label: 'Bldg 4', sub: 'Wi-Fi 6 AP', subSize: 9 },
   ];
 
   // Fan lines spread across the 160-wide Core Switch box (x: 270–430, centre: 350)
-  const fanX = [290, 315, 350, 385, 410];
+  const fanX = [295, 330, 370, 405];
   const buildingCenters = buildings.map((b) => b.x + 60);
 
   return (
     <svg width="100%" viewBox="0 0 700 230" xmlns="http://www.w3.org/2000/svg" className="block">
       {/* Caption */}
       <text x="350" y="22" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="10" style={s.caption}>
-        50,000 sq ft · 5 buildings · Segmented VLANs
+        50,000 sq ft · 4 buildings · Segmented VLANs
       </text>
       {/* Separator */}
       <line x1="20" y1="36" x2="690" y2="36" strokeWidth="0.5" strokeDasharray="2,2" style={s.separator} />
@@ -143,7 +142,7 @@ function WifiDiagram() {
         <g key={i}>
           <rect x={b.x} y="165" width="120" height="50" rx="6" strokeWidth="1" style={s.tealRect} />
           <text x={b.x + 60} y="185" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="11" fontWeight="600" style={s.tealTitle}>{b.label}</text>
-          <text x={b.x + 60} y="200" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="9"  style={s.sublabel}>Wi-Fi 6 AP</text>
+          <text x={b.x + 60} y="200" textAnchor="middle" fontFamily="JetBrains Mono" fontSize={b.subSize} style={s.sublabel}>{b.sub}</text>
         </g>
       ))}
     </svg>

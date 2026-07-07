@@ -11,7 +11,7 @@ import PatientFlowDiagram from '@/components/PatientFlowDiagram';
 export const metadata: Metadata = {
   title: 'MMDM · Case Study',
   description:
-    'Self-hosted, offline-first clinical platform for a six-station volunteer clinic in Costa Rica. Custom Node.js / SQLite / React stack with systemd auto-start and hourly automated backups.',
+    'Self-hosted, offline-first clinical platform for a six-clinic volunteer medical mission in Costa Rica. Custom Node.js / SQLite / React stack with systemd auto-start and hourly automated backups.',
 };
 
 export default function MmdmCaseStudyPage() {

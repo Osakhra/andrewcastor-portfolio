@@ -35,7 +35,7 @@ type Packet = {
 const STATIONS: Station[] = [
   { id: 'reg',       label: 'Registration', sublabel: 'Patient intake',        x: 90,  y: 100, color: 'teal'   },
   { id: 'triage',    label: 'Triage',       sublabel: 'Vitals & routing',       x: 250, y: 100, color: 'teal'   },
-  { id: 'provider',  label: 'Provider',     sublabel: 'Medical exam',           x: 415, y: 40,  color: 'purple' },
+  { id: 'provider',  label: 'Medical',      sublabel: 'Exam · pediatrics',      x: 415, y: 40,  color: 'purple' },
   { id: 'dental',    label: 'Dental',       sublabel: 'Dental care',            x: 415, y: 110, color: 'purple' },
   { id: 'vision',    label: 'Vision',       sublabel: 'Eye screening',          x: 415, y: 180, color: 'purple' },
   { id: 'pharmacy',  label: 'Pharmacy',     sublabel: 'Dispensing & discharge', x: 580, y: 80,  color: 'teal'   },
@@ -257,7 +257,7 @@ export default function PatientFlowDiagram() {
   return (
     <div>
       <p className="mb-3 font-mono text-[11px] uppercase tracking-widest text-text-tertiary">
-        Patient Flow · 6 Stations · EMR-Tracked
+        Patient Flow · 6 Clinics · 10 Stations
       </p>
       <div className="ac-card !p-5 overflow-x-auto">
         <div className="relative" style={{ minWidth: 700, height: CANVAS_H }}>

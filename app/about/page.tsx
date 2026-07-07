@@ -16,7 +16,6 @@ const aboutSections = [
   { id: 'intro',    label: 'Background' },
   { id: 'esports',  label: 'Esports' },
   { id: 'oasis',    label: 'OASIS' },
-  { id: 'travel',   label: 'Travel' },
   { id: 'personal', label: 'Personal' },
 ];
 
@@ -74,7 +73,7 @@ const gamingRanks = [
   },
   {
     game: 'Counter-Strike 2',
-    rank: 'Faceit 10 · 27K ELO · Global ELite',
+    rank: 'Faceit 10 · 27K ELO · Global Elite',
     note: 'Current Premier Rating Top 1% · 31M+ Player Base',
   },
   {
@@ -257,7 +256,7 @@ export default function AboutPage() {
               After leaving the Valorant scene I discovered Shatterline, a tactical shooter developed by Frag Lab Studio in Ukraine during the start of the Russia-Ukraine war. I wanted to help keep the game viable. I reached out to the developers and built their first competitive scene from scratch, founding OASIS as the organization behind it.
             </p>
             <p className="mb-4 font-body text-[15px] leading-relaxed text-text-secondary">
-              The initial work with Shatterline required convincing skeptical developers under wartime stress to provision practice servers they had no interest in running. It took a couple weeks of iterative persuasion, data-backed proposals, and trust-building across language and time-zone barriers. When I finally aquired server access, I built a full tournament infrastructure: rules, brackets, broadcast logistics, community moderation, and prize-pool funding secured through grants and sponsorships with our highest payout reaching $600.
+              The initial work with Shatterline required convincing skeptical developers under wartime stress to provision practice servers they had no interest in running. It took a couple weeks of iterative persuasion, data-backed proposals, and trust-building across language and time-zone barriers. When I finally acquired server access, I built a full tournament infrastructure: rules, brackets, broadcast logistics, community moderation, and prize-pool funding secured through grants and sponsorships with our highest payout reaching $600.
             </p>
             <p className="mb-4 font-body text-[15px] leading-relaxed text-text-secondary">
               When Shatterline&apos;s developers shifted their focus from PvP to PvE, OASIS pivoted. We expanded into a generalized model: identify promising early-access PvP titles, partnered with their development teams, and ran structured competitive events using experienced esports participants to generate media, feedback, and community momentum for games that needed it. I attended gaming conventions, cold-pitched studios, and nearly secured a Stockholm residency with the Alara Prime team before their funding collapsed. When Alara filed for bankruptcy, I managed the community transition without losing the trust we&apos;d built.
@@ -298,7 +297,7 @@ export default function AboutPage() {
         <FadeUp delay={80}>
           <div className="ac-card mb-4">
             <p className="mb-4 font-body text-[15px] leading-relaxed text-text-secondary">
-              Travel has been a constant since before I could choose it. Between a military family that moved across continents and my own adult life, I&apos;ve lived in or traveled through 20+ countries and 10+ US states. International exposure isn&apos;t a bullet point — it&apos;s the baseline. The common thread is operating in unfamiliar environments without losing effectiveness. I want to keep working in environments that require travel, ideally internationally. The medical mission work is where this instinct is most useful right now.
+              Travel has been a constant since before I could choose it. Between a military family that moved across continents and my own adult life, I&apos;ve lived in or traveled through 20+ countries and 10+ US states. International exposure isn&apos;t a bullet point; it&apos;s the baseline. The common thread is operating in unfamiliar environments without losing effectiveness. I want to keep working in environments that require travel, ideally internationally. The medical mission work is where this instinct is most useful right now.
             </p>
           </div>
         </FadeUp>
@@ -310,7 +309,7 @@ export default function AboutPage() {
             </p>
             <div className="space-y-3">
               {[
-                { location: 'Costa Rica',  date: 'April 2026',     note: 'First full EMR field deployment — live production use across 6 clinical stations' },
+                { location: 'Costa Rica',  date: 'April 2026',     note: 'First full clinical platform field deployment; live production use across 6 clinics' },
                 { location: 'Laredo, TX',  date: 'Recurring',      note: 'Domestic mission operations, ongoing' },
                 { location: 'Costa Rica',  date: '2027 (planned)', note: 'Next international field deployment' },
               ].map((dep) => (

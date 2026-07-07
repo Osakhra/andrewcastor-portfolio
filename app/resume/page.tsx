@@ -50,8 +50,11 @@ export default function ResumePage() {
               <h1 className="mb-1 font-display text-3xl font-bold text-text-primary">
                 {siteConfig.name}
               </h1>
-              <p className="mb-3 font-display text-base font-medium text-accent-teal">
+              <p className="mb-1 font-display text-base font-medium text-accent-teal">
                 {siteConfig.title}
+              </p>
+              <p className="mb-3 font-mono text-[12px] text-text-tertiary">
+                U.S. Citizen · Eligible for Security Clearance
               </p>
               <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-text-secondary">
                 <span className="flex items-center gap-1.5 font-body text-[13px]">
@@ -236,23 +239,36 @@ export default function ResumePage() {
               Certifications
             </h2>
             <div className="flex flex-wrap gap-2">
-              {certifications.map((cert) => (
-                <a
-                  key={cert.name}
-                  href={cert.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 rounded-md border border-border-subtle bg-bg-secondary/70 px-3 py-1.5 font-mono text-[12px] text-text-secondary backdrop-blur transition-colors hover:border-accent-teal/50 hover:text-accent-teal"
-                >
-                  <ShieldIcon
-                    className={cert.status === 'earned' ? 'text-accent-teal' : 'text-accent-purple-bright'}
-                  />
-                  {cert.name}
-                  {cert.status === 'progress' && (
-                    <span className="text-text-tertiary">(in study)</span>
-                  )}
-                </a>
-              ))}
+              {certifications.map((cert) => {
+                const pillClass =
+                  'inline-flex items-center gap-1.5 rounded-md border border-border-subtle bg-bg-secondary/70 px-3 py-1.5 font-mono text-[12px] text-text-secondary backdrop-blur';
+                const inner = (
+                  <>
+                    <ShieldIcon
+                      className={cert.status === 'earned' ? 'text-accent-teal' : 'text-accent-purple-bright'}
+                    />
+                    {cert.name}
+                    {cert.status === 'progress' && (
+                      <span className="text-text-tertiary">(in study)</span>
+                    )}
+                  </>
+                );
+                return cert.url ? (
+                  <a
+                    key={cert.name}
+                    href={cert.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${pillClass} transition-colors hover:border-accent-teal/50 hover:text-accent-teal`}
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <span key={cert.name} className={pillClass}>
+                    {inner}
+                  </span>
+                );
+              })}
             </div>
           </div>
         </FadeUp>

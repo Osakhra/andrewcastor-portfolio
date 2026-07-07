@@ -214,25 +214,38 @@ export default function HomePage() {
                 Certifications
               </p>
               <div className="flex flex-wrap gap-2">
-                {certifications.map((cert) => (
-                  <a
-                    key={cert.name}
-                    href={cert.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 rounded-md border border-border-subtle bg-bg-secondary/70 px-3 py-1.5 font-mono text-[12px] text-text-secondary backdrop-blur transition-colors hover:border-accent-teal/50 hover:text-accent-teal"
-                  >
-                    <ShieldIcon
-                      className={
-                        cert.status === 'earned' ? 'text-accent-teal' : 'text-accent-purple-bright'
-                      }
-                    />
-                    {cert.name}
-                    {cert.status === 'progress' && (
-                      <span className="text-text-tertiary">(in study)</span>
-                    )}
-                  </a>
-                ))}
+                {certifications.map((cert) => {
+                  const pillClass =
+                    'inline-flex items-center gap-1.5 rounded-md border border-border-subtle bg-bg-secondary/70 px-3 py-1.5 font-mono text-[12px] text-text-secondary backdrop-blur';
+                  const inner = (
+                    <>
+                      <ShieldIcon
+                        className={
+                          cert.status === 'earned' ? 'text-accent-teal' : 'text-accent-purple-bright'
+                        }
+                      />
+                      {cert.name}
+                      {cert.status === 'progress' && (
+                        <span className="text-text-tertiary">(in study)</span>
+                      )}
+                    </>
+                  );
+                  return cert.url ? (
+                    <a
+                      key={cert.name}
+                      href={cert.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${pillClass} transition-colors hover:border-accent-teal/50 hover:text-accent-teal`}
+                    >
+                      {inner}
+                    </a>
+                  ) : (
+                    <span key={cert.name} className={pillClass}>
+                      {inner}
+                    </span>
+                  );
+                })}
               </div>
             </div>
           </FadeUp>
@@ -267,7 +280,7 @@ export default function HomePage() {
               Build systems that hold up.
             </h2>
             <p className="mx-auto mb-5 max-w-md font-body text-base leading-relaxed text-text-secondary">
-              I am open to infrastructure, security, and field deployment roles: internships, co-op, contract, or full-time.
+              I am open to cybersecurity, cloud, and infrastructure roles: internships, co-op, contract, or full-time.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-2.5">
               <button
