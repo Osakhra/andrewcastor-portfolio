@@ -1,0 +1,4 @@
+# PDFs are binary; never apply line-ending conversion or diff them as text.
+# The generated resume PDF is pure-ASCII enough that git's heuristic
+# misclassifies it as text, which would corrupt it on CRLF checkout.
+*.pdf binary
