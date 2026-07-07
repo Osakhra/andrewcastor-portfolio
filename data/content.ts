@@ -199,14 +199,14 @@ export const education = [
     dates: 'Expected Fall 2028',
   },
   {
-    institution: 'Houston Community College',
+    institution: 'Houston City College',
     degree: 'A.A.S. Artificial Intelligence · National Honor Society',
     location: 'Houston, TX',
     dates: 'Conferred 2025',
     gpa: '3.8',
   },
   {
-    institution: 'Houston Community College',
+    institution: 'Houston City College',
     degree: 'A.S. General Science',
     location: 'Houston, TX',
     dates: 'Conferred 2026',
@@ -307,7 +307,7 @@ export const projects: Project[] = [
     category: 'Embedded · IoT',
     status: 'shipped',
     statusLabel: 'Prototype',
-    context: 'ENGR 1201 · Houston Community College · Spring 2026',
+    context: 'ENGR 1201 · Houston City College · Spring 2026',
     description: 
       'Handheld emergency evacuation device that computes and displays real-time escape routes from live temperature sensor data. Routes rebuild automatically as heat develops; reroutes around blocked zones, escalating through warning states, and triggering Shelter-In-Place when all exits are blocked.',
     bullets: [
