@@ -160,15 +160,15 @@ export default function AboutPage() {
             <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
               <div>
                 <p className="font-display text-base font-semibold text-text-primary">Performance Analyst</p>
-                <p className="font-mono text-[12px] text-accent-teal">XSET Gaming · North America VCT · 2021–2022</p>
+                <p className="font-mono text-[12px] text-accent-teal">XSET Gaming · North America VCT · Jan–Mar 2021</p>
               </div>
               <span className="status-pill status-shipped">Tier 1 Org</span>
             </div>
             <p className="mb-4 font-body text-[15px] leading-relaxed text-text-secondary">
-              XSET was one of the top NA Valorant organizations during the game&apos;s early competitive era. The same roster that won the VCT 2022 NA Stage 2 Challengers and represented North America internationally at Masters Copenhagen. I was offered the IGL (captain) role following strong performance in the open circuit, but chose to stay as an analyst, a deliberate decision to have more impact behind the scenes than at the mic.
+              XSET was a well-backed NA Valorant organization during the game&apos;s first competitive year. I joined as performance analyst for the first quarter of 2021, and the roster opened strong, winning the NSG x Complexity Invitational before advancing through open qualifiers into VCT 2021 NA Stage 1, taking 4th at both Challengers 1 and Challengers 2 and reaching Stage 1 Masters. I was offered the IGL (captain) role following strong performance in the open circuit, but chose to stay as an analyst, a deliberate decision to have more impact behind the scenes than at the mic.
             </p>
             <p className="mb-4 font-body text-[15px] leading-relaxed text-text-secondary">
-              The job was structured 12-hour days. Up at 5:30 AM watching international tournament VODs before the NA market woke up. By afternoon I was building per-player performance spreadsheets: round-by-round statistics, behavioral patterns, performance curves plotted over time. Evenings the roster was in scrims; I&apos;d watch live, flag in-round events, then spend the post-session reviewing every angle. At peak I was rated among the better analysts in the NA scene.
+              The job was structured 12-hour days. Up at 5:30 AM watching international tournament VODs before the NA market woke up. By afternoon I was building per-player performance spreadsheets: round-by-round statistics, behavioral patterns, performance curves plotted over time. Evenings the roster was in scrims; I&apos;d watch live, flag in-round events, then spend the post-session reviewing every angle. I put in more hours than anyone else on staff, and it showed — word got around, and players from other rosters started asking me to review their gameplay too.
             </p>
             <p className="font-body text-[15px] leading-relaxed text-text-secondary">
               I left the scene by choice. I'd hit my ceiling for what the role could teach me, and I could see more important work ahead. The discipline, pattern recognition, and analytical habits I built have stayed with me. They now show up directly in how I approach infrastructure and security work today.
