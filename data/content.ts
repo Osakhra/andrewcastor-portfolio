@@ -87,10 +87,12 @@ export const capabilities = [
 ];
 
 // Certs without a verification URL render as plain (non-clickable) pills.
-export const certifications = [
-  { name: 'CompTIA Security+', status: 'earned' as const,   url: '' },
-  { name: 'CompTIA Network+', status: 'earned' as const,    url: '' },
-  { name: 'Google IT Support Professional', status: 'earned' as const, url: 'https://www.credly.com/badges/835f3b5d-8240-4fb8-a3c7-a4857ca1dded/public_url' },
+type Certification = { name: string; status: 'earned' | 'progress'; url: string };
+
+export const certifications: Certification[] = [
+  { name: 'CompTIA Security+', status: 'earned', url: '' },
+  { name: 'CompTIA Network+', status: 'earned', url: '' },
+  { name: 'Google IT Support Professional', status: 'earned', url: 'https://www.credly.com/badges/835f3b5d-8240-4fb8-a3c7-a4857ca1dded/public_url' },
 ];
 
 type ExperienceBulletGroup = {
